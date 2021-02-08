@@ -1,0 +1,14 @@
+[package]
+name = "api"
+version = "0.1.0"
+authors = ["root <zhengzhiyong>"]
+edition = "2018"
+
+[dependencies]
+clap="3.0.0-beta.2"
+rocket = "0.4.6"
+rocket_contrib = "0.4.6"
+
+[dependencies.rusqlite]
+rusqlite = "0.24.2"
+features = ["bundled"]
