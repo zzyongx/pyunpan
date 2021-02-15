@@ -8,8 +8,13 @@ fn index() -> &'static str {
     "Hello, world!"
 }
 
-#[post("/file/<file..>")]
-fn put_file(token: ApiToken, file: PathBuf) -> Result<String, rocket::http::Status> {
+#[post("/file/<file..>?<md5>&<rewrite>")]
+fn put_file(
+    token: ApiToken,
+    file: PathBuf,
+    md5: Option<String>,
+    rewrite: Option<bool>,
+) -> Result<String, rocket::http::Status> {
     Ok(format!("{:?} {:?} {:?}", token.uid, token.value, file))
 }
 

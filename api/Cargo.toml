@@ -5,7 +5,8 @@ authors = ["root <zhengzhiyong>"]
 edition = "2018"
 
 [dependencies]
-clap="3.0.0-beta.2"
+clap = "3.0.0-beta.2"
+serde_yaml = "0.8.16"
 rocket = "0.4.6"
 rocket_contrib = "0.4.6"
 
